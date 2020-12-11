@@ -282,7 +282,7 @@ table {
       padding: 1.17em 1em 1.1em;
       border-bottom: 4px solid transparent;
       &.active, &:hover {
-        border-color: $dangerColor;
+        border-color: $theme;
       }
     }
   }
@@ -424,12 +424,17 @@ p.img-404 {
 }
 #home-title__img {
   width: 200px;
+  display: flex;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0.1em;
   img { 
     display: inline-block;
-    width: 100%;
+    width: 65px;
+  }
+  span {
+    font-size: 52px;
   }
 }
 #home-subtitle {
@@ -949,7 +954,7 @@ a.footnote-ref {
   }
 
   .hdr-wrapper {
-    padding: 1em;
+    padding: 0.5em 1em;
   }
   
 

@@ -18,7 +18,9 @@
 	{{- end }}
 	<div id="spotlight" class="animated fadeIn">
 		<div id="home-center">
-			<h1 id="home-title__img"><img src="{{"logo-full.png" | relURL}}" alt="{{ .Site.Title }}"></h1>
+			<h1 id="home-title__img"><img src="{{"logo.png" | relURL}}" alt="{{ .Site.Title }}">
+				<span style="font-family: 'nexa_boldregular';">elena</span>
+			</h1>
 			{{- with .Site.Params.homeSubtitle }}
 			<p id="home-subtitle">{{.}}</p>
 			{{- end }}

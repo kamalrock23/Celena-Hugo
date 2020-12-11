@@ -8,6 +8,14 @@ $highlight-grey: #7d828a;
 $midnightblue: #2c3e50;
 $dangerColor: #CC0000;
 
+@font-face {
+  font-family: 'nexa_boldregular';
+  src: url('/fonts/nexa_bold-webfont.woff2') format('woff2'),
+       url('/fonts/nexa_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Fonts
 //
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
