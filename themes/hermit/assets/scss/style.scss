@@ -138,6 +138,11 @@ table {
   margin: auto;
 }
 
+.medium {
+  max-width: 960px;
+  margin: auto;
+}
+
 .feather {
   display: inline-block;
   vertical-align: -.125em;
@@ -468,6 +473,7 @@ p.img-404 {
 }
 
 #home-footer {
+  padding: 1em 0;
   text-align: center;
   font-size: 1em;
   line-height: normal;
@@ -823,6 +829,75 @@ a.footnote-ref {
   }
 }
 
+.form-meghna {
+  padding-top: 100px;
+  height: auto;
+  width: 100%;
+  .form-group { 
+    margin-bottom: 20px;
+  }
+  .form-control {
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 5px 10px;
+    color: #E7EDF1;
+    border: 2px solid rgba(231, 237, 241, 0.5);
+    min-height: 48px;
+    &:focus {
+      border: 2px solid #fff;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  input, textarea {
+    &:hover {
+      border-color: #50E3C2;
+    }
+  }
+  &::placeholder {
+    color: #ddd !important;
+  }
+}
+
+#contact-submit {
+  border: 1px solid rgba(236, 239, 241, 0.07);
+  background: #57cbcc;
+  padding: 12px 0;
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    border-color: #2c9091;
+    background-color: #2c9091;
+  }
+}
+
+.contact-page {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 -30px;
+  .contact-page__right, 
+  .contact-page__left {
+    padding: 0 30px;
+    width: 50%;
+    .contact-list {
+      list-style-type: none;
+      padding-top: 40px;
+      margin: 0;
+      > li {
+        padding-bottom: 10px;
+        > img { 
+          display: inline-block;
+          height: 15px;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+      }
+    }    
+  }
+}
 
 // Media Queries
 //
@@ -923,6 +998,27 @@ a.footnote-ref {
     margin-left: 490px;
     max-width: 300px;
   }
+}
+
+@media (max-width: 800px) {
+
+  .min-height-100 {
+    padding-top: 3em;
+  }
+
+  .form-meghna {
+    padding-top: 2em;
+  }
+
+  .contact-page {
+    display: block;
+    margin: 0 -15px;
+    .contact-page__right, 
+    .contact-page__left {
+      width: 100%;
+    }
+  }
+
 }
 
 @media (max-width: 760px) {

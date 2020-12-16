@@ -1,0 +1,54 @@
+{{ define "head" }}
+	{{ if .Params.featuredImg -}}
+	<style>.bg-img {background-image: url('{{.Params.featuredImg}}');}</style>
+	{{- else if .Params.images -}}
+		{{- range first 1 .Params.images -}}
+		<style>.bg-img {background-image: url('{{. | absURL}}');}</style>
+		{{- end -}}
+	{{- end -}}
+{{ end }}
+
+{{ define "header" }}
+{{ partial "header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+	{{- if (or .Params.images .Params.featuredImg) }}
+	<div class="bg-img"></div>
+	{{- end }}
+	<main class="site-main section-inner medium animated fadeIn faster min-height-100">
+		<div class="contact-page">
+			<div class="contact-page__left">
+				<h1>{{ .Title }}</h1>
+				<div class="content">
+					{{ .Content | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" `${1}<a href="#${2}" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a>${3}` | safeHTML }}
+				</div>
+			</div>
+			<div class="contact-page__right">
+				<!-- <iframe class="form-meghna" src="https://docs.google.com/forms/d/e/1FAIpQLSezxH2V2IIl7qH9cJOU-iAHGVFLl8KG0da4SoMn4Zki_cvzpQ/viewform?embedded=true" width="640" height="943" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+
+				<form id="mG61Hd" class="form-meghna" action="https://formsubmit.co/mixou.mangamba@gmail.com" method="post" role="form">
+					<div class="form-group">
+						<input name="Name" type="text" placeholder="Name" class="form-control" required id="name" value="James Joseph">
+					</div>
+					<div class="form-group">
+						<input name="Email" type="email" placeholder="Your Email" class="form-control" required id="email">
+					</div>
+					<div class="form-group">
+						<input name="Subject" type="text" placeholder="Subject" class="form-control" required id="subject">
+					</div>
+					<div class="form-group">
+						<textarea name="Message" rows="6" placeholder="Message" class="form-control" required id="message"></textarea>
+					</div>
+					<div id="cf-submit">
+						<button type="submit" id="contact-submit" class="btn btn-transparent btn-block" value="Submit">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+{{ end }}
+
+{{ define "footer" }}
+{{ partialCached "footer.html" . }}
+{{ end }}

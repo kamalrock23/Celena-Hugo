@@ -37,7 +37,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   themeColor = "#494f5c"
 
   homeSubtitle = "A no-nonsense team of Red Hat certified engineers & reps"
-  footerCopyright = ' &#183; <a href="/privacy" rel="noopener">Privacy · </a> <a href="/terms-and-conditions" rel="noopener">Terms and Conditions</a>'
+  footerCopyright = ' &#183; <a href="/privacy" rel="noopener">Privacy · </a> <a href="/contact" rel="noopener">Contact · </a> <a href="/terms-and-conditions" rel="noopener">Terms and Conditions</a>'
   # bgImg = ""  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
@@ -85,6 +85,6 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     weight = 30
 
   [[menu.main]]
-    name = "About"
+    name = "About Us"
     url = "about-us/"
     weight = 40
